@@ -4,11 +4,15 @@ TokenHub Agent 是一个面向 AI 网关运维排障场景的只读诊断型 Age
 
 本项目适用于一次请求可通过 trace_id 串联日志、请求/响应记录、用量元信息和相关源码行为的网关系统。Agent 不会修改生产环境，也不会执行重启、改配置、修复资源等操作；所有能力都限定在只读诊断和修复建议生成。
 
+
+
 ## 演示视频
 
-点击下方链接观看演示：
+https://github.com/user-attachments/assets/f60e3e8c-7a42-45a8-b6ea-bd2a0041808b
 
-[▶ 观看演示视频](https://github.com/C2Z666/tokenhub-agent/releases/download/v0.1.0/demo.mp4)
+[完整视频](https://github.com/C2Z666/tokenhub-agent/releases/download/v0.1.0/demo.mp4)
+
+
 
 ## 项目能做什么
 
