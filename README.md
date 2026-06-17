@@ -43,11 +43,10 @@ TokenHub Agent 可以辅助回答这类问题：
 - **只读 MCP 工具**：通过本地 MCP Server 暴露受控的数据库查询和日志查询能力。
 - **LangGraph 工作流**：使用 intake、skill_router、planner、executor、verifier、reporter 等阶段化节点组织排查过程。
 - **Skill 排障手册**：将常见事故类型沉淀为可复用的排查方法，例如超时断流、协议不兼容、端点路由错误、上游异常等。
-- **RAG 记忆**：索引 Skill 文档和历史排查报告，在后续问题中复用已有经验。
 - **多轮对话**：支持跨轮上下文累积、追问、切换 trace、恢复历史 session。
 - **源码只读探索**：可在配置的网关源码目录内进行受控代码检索和阅读，辅助定位代码层原因。
 - **敏感信息脱敏**：对 API Key、Authorization、Token、Secret 等内容进行掩码处理。
-- **评测集支持**：内置 golden 样本，用于回归测试行为、安全约束和多轮排查能力。
+- **评测集支持**：建立 golden 测试集，用于回归测试行为、安全约束和多轮排查能力。
 
 ## 架构概览
 
@@ -96,7 +95,7 @@ pyproject.toml          Python 包元数据和依赖配置
 ### 环境要求
 
 - Python 3.10+
-- 可用的 LLM Provider 凭据
+- 可用的 LLM Provider Apikey
 - 可选：只读日志 / 数据库凭据，用于真实排查
 
 ### 从源码安装
@@ -194,4 +193,4 @@ TokenHub Agent 的设计目标是安全、可控地辅助排障：
 
 ## 评测
 
-Golden 评测样本位于 `tests/eval/`。这些样本覆盖诊断行为、安全约束和多轮交互场景，可用于回归测试 Prompt、Skill 和工具规划逻辑的改动。
+Golden 评测样本位于 `tests/eval/`。这些样本覆盖诊断行为、安全约束和多轮交互场景，可用于回归测试 Prompt、Skill 和工具规划逻辑的改动。**仅包含部分脱敏示例**。
