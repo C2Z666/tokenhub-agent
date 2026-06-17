@@ -3,5 +3,5 @@
 *.db
 agent/debug/info-all/
 tmp/
-doc/演示.mp4
+doc/*.mp4
 mcp/tests
